@@ -20,7 +20,7 @@ def do_chord_identification(input_path, output_path):
     chords = decode(chroma)
     # save the output
     with open(output_path, 'w') as f:
-        for onset, duration, label in chords:
+        for start_time, end_time, label in chords:
             f.write(f'{start_time} {end_time} {label}\n')
 
 if __name__ == '__main__':
