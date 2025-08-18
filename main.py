@@ -21,7 +21,7 @@ def do_chord_identification(input_path, output_path):
     # save the output
     with open(output_path, 'w') as f:
         for onset, duration, label in chords:
-            f.write(f'{onset} {duration} {label}\n')
+            f.write(f'{start_time} {end_time} {label}\n')
 
 if __name__ == '__main__':
     task_name = sys.argv[1]
